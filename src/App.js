@@ -21,7 +21,6 @@ class App extends React.Component {
 
   constructor(props){
     super(props);
-
     this.state ={data:[{
       id:1,
       name:"Sarthak",
@@ -32,11 +31,13 @@ class App extends React.Component {
       name:"Sarthak2",
       user:"sarthak2.iih@gmail.com",
       pass:"sarthak2.iih@123"
-    }]}
+    }]
+  }
 
   }
 
   register = (userData) =>{
+    
     const user = this.state.data.find(o => o.user === userData.email)
     if(!user){
       this.state.data.push(userData)

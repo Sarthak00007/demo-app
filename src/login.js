@@ -32,8 +32,8 @@ class Login extends React.Component{
     super(props);
     this.state={
       user:{
-        email:"",
-        password:""
+        user:"",
+        pass:""
       },
       vertical: "top", horizontal: "center"
     }
@@ -45,6 +45,8 @@ class Login extends React.Component{
   
   login = async (e) =>{
     e.preventDefault();
+    console.log("this.props.data")
+    console.log(this.props.data)
     var randomVal = Math.floor(Math.random() * 7);
     const user = this.props.data.find(o => o.user === this.state.user.email)
     if(user){
@@ -83,18 +85,18 @@ class Login extends React.Component{
               <Typography variant="h5" className="logo" color="primary">TaskApp</Typography>
               <Typography variant="h5" color="primary">Login </Typography>
             <span><TextValidator
-              id="email"
+              id="user"
               label="Email"
               onChange={this.handlechange}
               name="email"
               variant="outlined"
               validators={['required','isEmail']}
               errorMessages={['This field is required','Email is not valid']}
-              value={this.state.user.email}/></span>
+              value={this.state.user.user}/></span>
               <span>
             <TextValidator 
-              id="password" 
-              value={this.state.user.password} 
+              id="pass" 
+              value={this.state.user.pass} 
               onChange={this.handlechange}
               variant="outlined"
               validators={['required']}

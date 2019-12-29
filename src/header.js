@@ -37,7 +37,7 @@
                 TaskApp
               </Typography>
               <Typography variant="h6" className={classes.title}>
-                Hi, {localStorage.getItem('name')}
+                Hi, {localStorage.getItem('firstName')}
               </Typography>
               <Button onClick={this.props.logout} color="inherit">Logout</Button>
             </Toolbar>
