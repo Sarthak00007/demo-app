@@ -6,18 +6,6 @@ import { ThemeProvider } from "@material-ui/styles";
 import { createMuiTheme } from "@material-ui/core/styles";
 import Welcome from './welcome';
 
-// const data=[{
-//   id:1,
-//   name:"Sarthak",
-//   user:"sarthak.iih@gmail.com",
-//   pass:"sarthak.iih@123"
-// },{
-//   id:2,
-//   name:"Sarthak2",
-//   user:"sarthak2.iih@gmail.com",
-//   pass:"sarthak2.iih@123"
-// }];
-
 const theme = createMuiTheme({
   palette: {
     primary: {
@@ -49,11 +37,9 @@ class App extends React.Component {
   }
 
   register = (userData) =>{
-    console.log("sarthak")
     const user = this.state.data.find(o => o.user === userData.email)
     if(!user){
       this.state.data.push(userData)
-      console.log(this.state.data)
     }else{
       console.log("Email Already Exsist")  
     }

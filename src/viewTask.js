@@ -15,9 +15,6 @@ import React from 'react'
 
 class Viewtask extends React.Component{
     render(){
-        console.log("this.props.taskData");
-        console.log(this.props.taskData);
-        console.log("this.props.taskData");
         return (
             <TableContainer className="form" >
               <Table>

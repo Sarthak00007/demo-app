@@ -8,18 +8,6 @@ import './App.css';
 import { withStyles } from '@material-ui/styles';
 import PropTypes from 'prop-types'; 
 
-// const data=[{
-//   id:1,
-//   name:"Sarthak",
-//   user:"sarthak.iih@gmail.com",
-//   pass:"sarthak.iih@123"
-// },{
-//   id:2,
-//   name:"Sarthak2",
-//   user:"sarthak2.iih@gmail.com",
-//   pass:"sarthak2.iih@123"
-// }];
-
 const posi = [
   { vertical: "top", horizontal: "center" },
   { vertical: "top", horizontal: "right" },
@@ -84,7 +72,6 @@ class Login extends React.Component{
   render(){
     const { open, vertical, horizontal} = this.state
     const { classes } = this.props;
-    console.log(this.props)
     return(
       <React.Fragment>
         {(!localStorage.getItem('isLogin')) ? (

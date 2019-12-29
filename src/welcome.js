@@ -39,7 +39,6 @@ class Welcome extends React.Component{
         })
     }
     addTask = (task) =>{
-      console.log("Add")
       tasks.push(task)
       this.setState({
         task
